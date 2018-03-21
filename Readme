@@ -1,0 +1,48 @@
+The program consist of 3 Classes:
+1 - Main Class HttpcClient.java
+2- Command class httpcCommand.java that parses the user input and forward the correct request to:
+3- HttpcLibrary.java that open a socket, send, receive, the request. (Contains all functional methods)
+
+Test Queries:
+
+httpc get 'http://httpbin.org/get?course=networking&assignment=1'
+
+httpc get -v 'http://httpbin.org/get?course=networking&assignment=1'
+
+httpc post -h Content-Type:application/json --d '{"Assignment": 1}' http://httpbin.org/post
+
+
+httpc post -h Content-Type:application/json --d '{"Assignment": 1}' -f input.txt http://httpbin.org/post
+(Error, cannot use -d and -f)
+
+
+Optional:
+
+httpc get -v 'http://httpbin.org/get?course=networking&assignment=1' -o output.txt
+
+httpc post -h Content-Type:application/json -f input.txt http://httpbin.org/post
+
+httpc post -h Content-Type:application/json --d '{"Assignment": 1}' http://localhost:9999
+
+LA2 Requests:
+
+1) GET /
+httpc get -v http://localhost:9999
+
+2) GET /public/
+httpc get -v http://localhost:9999/public/
+
+3) GET /file.txt
+httpc get -v http://localhost:9999/file.txt
+
+4) GET /nt.txt
+httpc get -v http://localhost:9999/nt.txt
+
+5) POST / 
+httpc post -v http://localhost:9999/
+
+6) POST /nt.txt
+httpc post -h Content-Type:application/json --d '{"data":"somedata"}' http://localhost:9999/nt.txt
+
+7) POST /text.js
+httpc post -h Content-Type:application/json --d '{"data":"somedata"}' http://localhost:9999/nt1.txt

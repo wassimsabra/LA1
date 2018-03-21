@@ -1,0 +1,18 @@
+
+{
+  "args": {}, 
+  "data": "{\"Assignment\": 1}\r\n", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Connection": "close", 
+    "Content-Length": "19", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org"
+  }, 
+  "json": {
+    "Assignment": 1
+  }, 
+  "origin": "132.205.229.136", 
+  "url": "http://httpbin.org/post"
+}
